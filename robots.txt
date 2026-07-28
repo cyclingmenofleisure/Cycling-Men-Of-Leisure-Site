@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /blog-drafts/
+
+Sitemap: https://www.cyclingmenofleisure.com/sitemap.xml

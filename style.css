@@ -1,0 +1,194 @@
+/* Cycling Men of Leisure — Leisure Club Classic */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Oswald:wght@300;400;500&display=swap');
+
+:root {
+  --ink: #1c1611;
+  --char: #262019;
+  --panel: #2f2820;
+  --cream: #f3ead9;
+  --cream-dim: #cfc3ab;
+  --bourbon: #c8923a;
+  --bourbon-deep: #9a6b22;
+  --ember: #a4501f;
+  --line: rgba(200, 146, 58, 0.35);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+
+a { color: var(--bourbon); text-decoration: none; }
+a:hover { color: var(--cream); }
+
+/* ---------- Nav ---------- */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(28, 22, 17, 0.96);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  max-width: 1100px; margin: 0 auto; padding: 0.9rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+}
+.brand {
+  font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.35rem;
+  color: var(--cream); letter-spacing: 0.02em;
+}
+.brand span { color: var(--bourbon); }
+.brand small {
+  display: block; font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cream-dim);
+}
+nav ul { display: flex; gap: 1.6rem; list-style: none; flex-wrap: wrap; }
+nav a {
+  font-family: 'Oswald', sans-serif; font-weight: 400; font-size: 0.8rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream-dim);
+  padding-bottom: 3px; border-bottom: 1px solid transparent;
+}
+nav a:hover, nav a.active { color: var(--bourbon); border-bottom-color: var(--bourbon); }
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center; padding: 6rem 1.5rem 5rem;
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(164, 80, 31, 0.25), transparent 60%),
+    radial-gradient(ellipse at 50% -20%, rgba(200, 146, 58, 0.12), transparent 55%),
+    var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.hero .kicker, .kicker {
+  font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.8rem;
+  letter-spacing: 0.45em; text-transform: uppercase; color: var(--bourbon);
+}
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 700; margin: 1rem 0 0.4rem; }
+.hero .fw { font-style: italic; font-weight: 400; color: var(--bourbon); font-size: clamp(1.2rem, 2.5vw, 1.7rem); font-family: 'Playfair Display', serif; }
+.hero p.lede { max-width: 620px; margin: 1.5rem auto 0; font-size: 1.3rem; color: var(--cream-dim); }
+.rule {
+  width: 70px; height: 1px; background: var(--bourbon); border: none;
+  margin: 1.8rem auto; position: relative;
+}
+.rule::after {
+  content: "✦"; position: absolute; top: -0.72em; left: 50%; transform: translateX(-50%);
+  color: var(--bourbon); background: transparent; font-size: 0.8rem; padding: 0 0.5rem;
+}
+.btn {
+  display: inline-block; margin-top: 2rem; padding: 0.85rem 2.4rem;
+  font-family: 'Oswald', sans-serif; font-size: 0.8rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--ink); background: var(--bourbon);
+  border: 1px solid var(--bourbon); transition: all 0.25s;
+}
+.btn:hover { background: transparent; color: var(--bourbon); }
+.btn.ghost { background: transparent; color: var(--bourbon); }
+.btn.ghost:hover { background: var(--bourbon); color: var(--ink); }
+
+/* ---------- Sections ---------- */
+section { max-width: 1100px; margin: 0 auto; padding: 4.5rem 1.5rem; }
+.section-head { text-align: center; margin-bottom: 3rem; }
+.section-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin-top: 0.6rem; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); padding: 2.2rem;
+}
+.card h3 { color: var(--bourbon); font-size: 1.35rem; margin-bottom: 0.7rem; }
+.card .num {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 2.2rem;
+  color: var(--bourbon-deep); line-height: 1; display: block; margin-bottom: 0.8rem;
+}
+.quote {
+  text-align: center; font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2rem); max-width: 750px; margin: 0 auto; color: var(--cream);
+}
+.quote cite {
+  display: block; margin-top: 1.2rem; font-family: 'Oswald', sans-serif; font-style: normal;
+  font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bourbon);
+}
+.band { background: var(--char); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.band-inner { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+/* photo placeholders */
+.ph {
+  background:
+    linear-gradient(135deg, rgba(200,146,58,0.14), rgba(164,80,31,0.10)),
+    var(--panel);
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--cream-dim); font-family: 'Oswald', sans-serif; font-size: 0.72rem;
+  letter-spacing: 0.25em; text-transform: uppercase; min-height: 230px; text-align: center; padding: 1rem;
+}
+
+/* timeline */
+.timeline { border-left: 1px solid var(--line); margin-left: 0.5rem; padding-left: 2rem; }
+.timeline .stop { position: relative; padding-bottom: 2.4rem; }
+.timeline .stop::before {
+  content: ""; position: absolute; left: calc(-2rem - 5px); top: 0.5em;
+  width: 9px; height: 9px; background: var(--bourbon); border-radius: 50%;
+}
+.timeline .year {
+  font-family: 'Oswald', sans-serif; font-size: 0.8rem; letter-spacing: 0.3em;
+  color: var(--bourbon); text-transform: uppercase;
+}
+.timeline h3 { font-size: 1.4rem; margin: 0.3rem 0 0.5rem; }
+
+/* tables */
+table { width: 100%; border-collapse: collapse; }
+th {
+  font-family: 'Oswald', sans-serif; font-weight: 400; font-size: 0.75rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--bourbon);
+  text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--bourbon);
+}
+td { padding: 0.9rem 1rem; border-bottom: 1px solid rgba(200,146,58,0.15); }
+
+/* forms */
+input, textarea {
+  width: 100%; background: var(--ink); border: 1px solid var(--line);
+  color: var(--cream); padding: 0.9rem 1rem; font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem; margin-bottom: 1.1rem;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--bourbon); }
+label {
+  display: block; font-family: 'Oswald', sans-serif; font-size: 0.72rem;
+  letter-spacing: 0.25em; text-transform: uppercase; color: var(--cream-dim); margin-bottom: 0.4rem;
+}
+
+/* footer */
+footer { background: var(--char); border-top: 1px solid var(--line); margin-top: 2rem; }
+.foot {
+  max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 2rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;
+}
+.foot h4 { color: var(--bourbon); font-size: 1.1rem; margin-bottom: 0.9rem; }
+.foot ul { list-style: none; }
+.foot li { margin-bottom: 0.5rem; }
+.foot a { color: var(--cream-dim); }
+.foot a:hover { color: var(--bourbon); }
+.copyright {
+  text-align: center; padding: 1.3rem; font-family: 'Oswald', sans-serif;
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--cream-dim); border-top: 1px solid rgba(200,146,58,0.15);
+}
+/* ---------- Mobile nav / hamburger ---------- */
+.nav-toggle { display: none; }
+.nav-burger {
+  display: none; cursor: pointer; user-select: none;
+  font-size: 1.7rem; line-height: 1; color: var(--bourbon);
+}
+@media (max-width: 980px) {
+  .nav { flex-wrap: wrap; justify-content: space-between; align-items: center; }
+  .nav-burger { display: block; }
+  nav { flex-basis: 100%; }
+  nav ul {
+    display: none; flex-direction: column; width: 100%;
+    gap: 0; margin-top: 0.7rem;
+  }
+  .nav-toggle:checked ~ nav ul { display: flex; }
+  nav ul li { border-top: 1px solid var(--line); }
+  nav ul li a { display: block; padding: 0.75rem 0.2rem; }
+}
