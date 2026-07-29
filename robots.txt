@@ -3,4 +3,4 @@ Allow: /
 Disallow: /thank-you
 Disallow: /blog-drafts/
 
-Sitemap: https://cyclingmenofleisure.com/sitemap.xml
+Sitemap: https://www.cyclingmenofleisure.com/sitemap.xml
