@@ -47,6 +47,18 @@
     opacity: 0; transition: opacity .3s ease;
   }
   .masonry .shot:hover .cap { opacity: 1; }
+  .filters {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1.6rem;
+  }
+  .filt {
+    font-family: 'Oswald', sans-serif; font-size: 0.66rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--cream-dim); cursor: pointer;
+    background: transparent; border: 1px solid var(--line); padding: 0.5rem 1rem;
+    transition: color .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .filt:hover { color: var(--cream); border-color: var(--bourbon); }
+  .filt.active { color: var(--ink); background: var(--bourbon); border-color: var(--bourbon); }
+  .masonry .shot.hide { display: none; }
   /* click-to-enlarge lightbox */
   .lightbox {
     display: none; position: fixed; inset: 0; z-index: 200; cursor: zoom-out;
@@ -101,27 +113,37 @@
 </div>
 
 <section>
+  <div class="filters">
+    <button class="filt active" data-filter="all">All</button>
+    <button class="filt" data-filter="ragbrai">RAGBRAI</button>
+    <button class="filt" data-filter="brag">BRAG</button>
+    <button class="filt" data-filter="bourbon">Bourbon Country</button>
+    <button class="filt" data-filter="michigan">Michigan</button>
+    <button class="filt" data-filter="road">On the Road</button>
+  </div>
   <div class="masonry">
-    <div class="shot"><img src="images/IMG_7734.jpg" alt="Keith and Melanie Erickson with their Co-Motion bikes at the RAGBRAI 53 finish in Dubuque" loading="lazy" decoding="async"><span class="cap">Keith &amp; Melanie made it to Dubuque · RAGBRAI 53</span></div>
-    <div class="shot"><img src="images/IMG_0792.jpg" alt="Two riders in Tour de Livingston jerseys with their Trek road bikes at a fall morning start" loading="lazy" decoding="async"><span class="cap">Tour de Livingston · a crisp fall start</span></div>
-    <div class="shot"><img src="images/IMG_9996.jpg" alt="Three riders holding bikes overhead by a river bridge" loading="lazy" decoding="async"><span class="cap">Bikes up at the river</span></div>
-    <div class="shot"><img src="images/32F143F9-FD26-4204-B834-EBA9CAB26C40.jpeg" alt="Two riders at the Swamp Fox Distillery mural in Buena Vista, GA" loading="lazy" decoding="async"><span class="cap">Swamp Fox Distillery · BRAG</span></div>
-    <div class="shot"><img src="images/_storage_emulated_0_DCIM_Camera_201607-1d143cb.JPG" alt="Rider in a stamp-print shirt with an iced coffee at a convenience store" loading="lazy" decoding="async"><span class="cap">Convenience-store fuel stop</span></div>
-    <div class="shot"><img src="images/4611D4EC-850B-49C3-8915-9CAB1391E363.jpeg" alt="The Mackinac Bridge over the Straits" loading="lazy" decoding="async"><span class="cap">The Mighty Mac · DALMAC</span></div>
-    <div class="shot"><img src="images/IMG_9909.JPG" alt="The RAGBRAI 50 Was Here signature wall" loading="lazy" decoding="async"><span class="cap">RAGBRAI 50 — we were here</span></div>
-    <div class="shot"><img src="images/AD3DD4E2-2886-47FA-9A82-6626BB1DC6E1.jpeg" alt="Two riders in #teamsherpa kit at a ballfield campsite" loading="lazy" decoding="async"><span class="cap">Camp life with #TeamSherpa</span></div>
-    <div class="shot"><img src="images/67BC718C-0866-4DEA-8D68-CC3F811FF25D.jpeg" alt="Two riders in BRAG denim-overall print jerseys" loading="lazy" decoding="async"><span class="cap">Peaches-to-Beaches overalls</span></div>
-    <div class="shot"><img src="images/IMG_8177.jpeg" alt="Two riders in Ride Bikes Drink Bourbon jerseys at the finish arch" loading="lazy" decoding="async"><span class="cap">Ride bikes, drink bourbon</span></div>
-    <div class="shot"><img src="images/IMG_9391.JPG" alt="Rieger's Kansas City Whiskey selected for Cycling Men of Leisure with an old fashioned" loading="lazy" decoding="async"><span class="cap">Our own CMOL-selected Rieger's</span></div>
-    <div class="shot"><img src="images/36B0BE23-6F12-4CBE-B973-AD40D9785CF5.jpeg" alt="Three riders at the DALMAC gear trailer" loading="lazy" decoding="async"><span class="cap">At the DALMAC trailer</span></div>
-    <div class="shot"><img src="images/A019B385-AD08-4C4B-94FE-45E5C9A3E23A.jpeg" alt="Long shadow of a cyclist cast on the pavement" loading="lazy" decoding="async"><span class="cap">Long shadows on the road</span></div>
-    <div class="shot"><img src="images/E055F161-C2C3-40AC-A5D3-0385B50F0F69.jpeg" alt="Peaches to Beaches BRAG 30286 road decal" loading="lazy" decoding="async"><span class="cap">Peaches to Beaches · 30286</span></div>
-    <div class="shot"><img src="images/96541F64-0F02-4CF9-8E2E-5A0DBD64DCE8-2edd45e.jpeg" alt="Three riders in DALMAC jerseys before the ride" loading="lazy" decoding="async"><span class="cap">DALMAC kit, ready to roll</span></div>
-    <div class="shot"><img src="images/_storage_emulated_0_DCIM_Camera_20160725_07232.jpg" alt="Three riders in costume jerseys at the start line" loading="lazy" decoding="async"><span class="cap">Costume-jersey day at the start</span></div>
-    <div class="shot"><img src="images/IMG_9286.jpg" alt="Rider playing checkers on a porch in a Lakes and Libations 2023 jersey" loading="lazy" decoding="async"><span class="cap">Checkers break — Lakes &amp; Libations 2023</span></div>
-    <div class="shot"><img src="images/_storage_emulated_0_DCIM_Camera_201607-ae3e553.JPG" alt="Two riders crossing a causeway over a reservoir" loading="lazy" decoding="async"><span class="cap">Crossing the causeway</span></div>
-    <div class="shot"><img src="images/blob.jpg" alt="Four riders in Hawaiian shirts by a support truck" loading="lazy" decoding="async"><span class="cap">Hawaiian-shirt day at the truck</span></div>
-    <div class="shot"><img src="images/blob-43ba76b.jpg" alt="Most Interesting Man meme: I don't cycle much but when I do I am a Cycling Man of Leisure" loading="lazy" decoding="async"><span class="cap">A Cycling Man of Leisure</span></div>
+    <div class="shot" data-cat="bourbon"><img src="images/IMG_7921.jpg" alt="Two riders in Cycling Men of Leisure and Ride Bikes Drink Bourbon caps beside Eagle Rare and Blanton's barrels at Buffalo Trace" loading="lazy" decoding="async"><span class="cap">Barrels at Buffalo Trace · Frankfort, KY</span></div>
+    <div class="shot" data-cat="bourbon"><img src="images/IMG_7881.jpg" alt="Three men smiling under an event tent at Buffalo Trace, one in a Cycling Men of Leisure Hawaiian shirt" loading="lazy" decoding="async"><span class="cap">Good company under the tent · Buffalo Trace</span></div>
+    <div class="shot" data-cat="ragbrai"><img src="images/IMG_7734.jpg" alt="Keith and Melanie Erickson with their Co-Motion bikes at the RAGBRAI 53 finish in Dubuque" loading="lazy" decoding="async"><span class="cap">Keith &amp; Melanie made it to Dubuque · RAGBRAI 53</span></div>
+    <div class="shot" data-cat="michigan"><img src="images/IMG_0792.jpg" alt="Two riders in Tour de Livingston jerseys with their Trek road bikes at a fall morning start" loading="lazy" decoding="async"><span class="cap">Tour de Livingston · a crisp fall start</span></div>
+    <div class="shot" data-cat="ragbrai"><img src="images/IMG_9996.jpg" alt="Three riders holding bikes overhead by a river bridge" loading="lazy" decoding="async"><span class="cap">Bikes up at the river</span></div>
+    <div class="shot" data-cat="brag"><img src="images/32F143F9-FD26-4204-B834-EBA9CAB26C40.jpeg" alt="Two riders at the Swamp Fox Distillery mural in Buena Vista, GA" loading="lazy" decoding="async"><span class="cap">Swamp Fox Distillery · BRAG</span></div>
+    <div class="shot" data-cat="ragbrai"><img src="images/_storage_emulated_0_DCIM_Camera_201607-1d143cb.JPG" alt="Rider in a stamp-print shirt with an iced coffee at a convenience store" loading="lazy" decoding="async"><span class="cap">Convenience-store fuel stop</span></div>
+    <div class="shot" data-cat="michigan"><img src="images/4611D4EC-850B-49C3-8915-9CAB1391E363.jpeg" alt="The Mackinac Bridge over the Straits" loading="lazy" decoding="async"><span class="cap">The Mighty Mac · DALMAC</span></div>
+    <div class="shot" data-cat="ragbrai"><img src="images/IMG_9909.JPG" alt="The RAGBRAI 50 Was Here signature wall" loading="lazy" decoding="async"><span class="cap">RAGBRAI 50 — we were here</span></div>
+    <div class="shot" data-cat="ragbrai"><img src="images/AD3DD4E2-2886-47FA-9A82-6626BB1DC6E1.jpeg" alt="Two riders in #teamsherpa kit at a ballfield campsite" loading="lazy" decoding="async"><span class="cap">Camp life with #TeamSherpa</span></div>
+    <div class="shot" data-cat="brag"><img src="images/67BC718C-0866-4DEA-8D68-CC3F811FF25D.jpeg" alt="Two riders in BRAG denim-overall print jerseys" loading="lazy" decoding="async"><span class="cap">Peaches-to-Beaches overalls</span></div>
+    <div class="shot" data-cat="bourbon"><img src="images/IMG_8177.jpeg" alt="Two riders in Ride Bikes Drink Bourbon jerseys at the finish arch" loading="lazy" decoding="async"><span class="cap">Ride bikes, drink bourbon</span></div>
+    <div class="shot" data-cat="bourbon"><img src="images/IMG_9391.JPG" alt="Rieger's Kansas City Whiskey selected for Cycling Men of Leisure with an old fashioned" loading="lazy" decoding="async"><span class="cap">Our own CMOL-selected Rieger's</span></div>
+    <div class="shot" data-cat="michigan"><img src="images/36B0BE23-6F12-4CBE-B973-AD40D9785CF5.jpeg" alt="Three riders at the DALMAC gear trailer" loading="lazy" decoding="async"><span class="cap">At the DALMAC trailer</span></div>
+    <div class="shot" data-cat="road"><img src="images/A019B385-AD08-4C4B-94FE-45E5C9A3E23A.jpeg" alt="Long shadow of a cyclist cast on the pavement" loading="lazy" decoding="async"><span class="cap">Long shadows on the road</span></div>
+    <div class="shot" data-cat="brag"><img src="images/E055F161-C2C3-40AC-A5D3-0385B50F0F69.jpeg" alt="Peaches to Beaches BRAG 30286 road decal" loading="lazy" decoding="async"><span class="cap">Peaches to Beaches · 30286</span></div>
+    <div class="shot" data-cat="michigan"><img src="images/96541F64-0F02-4CF9-8E2E-5A0DBD64DCE8-2edd45e.jpeg" alt="Three riders in DALMAC jerseys before the ride" loading="lazy" decoding="async"><span class="cap">DALMAC kit, ready to roll</span></div>
+    <div class="shot" data-cat="ragbrai"><img src="images/_storage_emulated_0_DCIM_Camera_20160725_07232.jpg" alt="Three riders in costume jerseys at the start line" loading="lazy" decoding="async"><span class="cap">Costume-jersey day at the start</span></div>
+    <div class="shot" data-cat="bourbon"><img src="images/IMG_9286.jpg" alt="Rider playing checkers on a porch in a Lakes and Libations 2023 jersey" loading="lazy" decoding="async"><span class="cap">Checkers break — Lakes &amp; Libations 2023</span></div>
+    <div class="shot" data-cat="road"><img src="images/_storage_emulated_0_DCIM_Camera_201607-ae3e553.JPG" alt="Two riders crossing a causeway over a reservoir" loading="lazy" decoding="async"><span class="cap">Crossing the causeway</span></div>
+    <div class="shot" data-cat="ragbrai"><img src="images/blob.jpg" alt="Four riders in Hawaiian shirts by a support truck" loading="lazy" decoding="async"><span class="cap">Hawaiian-shirt day at the truck</span></div>
+    <div class="shot" data-cat="road"><img src="images/blob-43ba76b.jpg" alt="Most Interesting Man meme: I don't cycle much but when I do I am a Cycling Man of Leisure" loading="lazy" decoding="async"><span class="cap">A Cycling Man of Leisure</span></div>
   </div>
   <p style="text-align:center; margin-top:2rem; color:var(--cream-dim); font-style:italic;">
     More shots from the road are always welcome — send them our way and we'll add them here.</p>
@@ -177,5 +199,21 @@
   })();
 </script>
 
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.filt');
+  var shots = document.querySelectorAll('.masonry .shot');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      buttons.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var f = b.getAttribute('data-filter');
+      shots.forEach(function (s) {
+        s.classList.toggle('hide', f !== 'all' && s.getAttribute('data-cat') !== f);
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
