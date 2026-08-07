@@ -131,7 +131,9 @@
   </div>
 
   <div style="margin-top:3rem;">
-    <div class="kicker" style="margin-bottom:0.8rem; text-align:center;">Where the Listeners Are</div>
+    <div class="kicker" style="margin-bottom:0.4rem; text-align:center;">Top 10 States by Downloads</div>
+    <p style="text-align:center; color: var(--cream-dim); margin-bottom:1.2rem;">Listeners tune in
+    from every state — these are the ten with the biggest crowds.</p>
     <table>
       <thead>
         <tr><th>Rank</th><th>State</th><th>All-Time Downloads</th></tr>
@@ -142,6 +144,11 @@
         <tr><td>3</td><td>Georgia</td><td>6,584</td></tr>
         <tr><td>4</td><td>Florida</td><td>5,770</td></tr>
         <tr><td>5</td><td>New York</td><td>4,756</td></tr>
+        <tr><td>6</td><td>Illinois</td><td>4,345</td></tr>
+        <tr><td>7</td><td>Michigan</td><td>3,618</td></tr>
+        <tr><td>8</td><td>Pennsylvania</td><td>2,797</td></tr>
+        <tr><td>9</td><td>Virginia</td><td>2,710</td></tr>
+        <tr><td>10</td><td>Ohio</td><td>2,683</td></tr>
       </tbody>
     </table>
     <p style="color: var(--cream-dim); font-size:0.95rem; margin-top:0.8rem; text-align:center;">
@@ -293,7 +300,7 @@
 
 <script>
 /* weekly updater: replace ONLY the next line */
-const PRESS_DATA = {"updated":"August 7, 2026","us_total":94878,"world_total":123208,"country_count":183,"top_states":[["California",9810],["Texas",7087],["Georgia",6584],["Florida",5770],["New York",4756]]};
+const PRESS_DATA = {"updated":"August 7, 2026","us_total":94878,"world_total":123208,"country_count":183,"top_states":[["California",9810],["Texas",7087],["Georgia",6584],["Florida",5770],["New York",4756],["Illinois",4345],["Michigan",3618],["Pennsylvania",2797],["Virginia",2710],["Ohio",2683]]};
 (function(){
   const k = n => Math.floor(n/1000).toLocaleString('en-US') + ',000';
   const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
