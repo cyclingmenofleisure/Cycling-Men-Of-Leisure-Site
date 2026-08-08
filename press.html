@@ -274,13 +274,39 @@
       </p>
     </div>
     <div class="card">
-      <h3>Press Inquiries</h3>
-      <p>For interviews, sponsorship rates, or anything else, reach out through the
-      <a href="contact.html">contact page</a> — we answer every message, usually after
-      the ride.</p>
+      <h3>Press Contact</h3>
+      <p>For interviews, sponsorship rates, or anything else:</p>
+      <p style="margin-top:0.6rem;"><a href="mailto:cyclingmenofleisure@gmail.com">cyclingmenofleisure@gmail.com</a></p>
+      <p style="margin-top:0.6rem; font-size:0.95rem;">Or use the <a href="contact.html">contact page</a> —
+      we answer every message, usually after the ride.</p>
     </div>
   </div>
 </section>
+
+<!-- ============ INTERNATIONAL ============ -->
+<div class="band">
+  <div class="band-inner" style="text-align:center;">
+    <div class="kicker">Beyond the States</div>
+    <h2 style="margin-top:0.6rem;">A Global Leisure Class</h2>
+    <p style="max-width:680px; margin:1rem auto 0;">CMOL isn't just a US audience — the show
+    has been downloaded in <span id="pk-countries2">183</span> countries across every inhabited
+    continent. The United Kingdom, Australia, and Canada lead the way abroad, with a growing
+    following in Ireland, South Africa, and India — proof that a good bourbon and a slow ride
+    translate in any language.</p>
+    <div class="cols" style="margin-top:2.5rem; max-width:760px; margin-left:auto; margin-right:auto;">
+      <div class="card">
+        <span class="num" id="pk-intl">28,000+</span>
+        <h3>International Downloads</h3>
+        <p>Listeners outside the US, spanning <span id="pk-countries3">182</span> other
+        countries and territories.</p>
+      </div>
+      <div class="card">
+        <h3>Top Countries Abroad</h3>
+        <p id="pk-top-countries">🇬🇧 United Kingdom · 🇦🇺 Australia · 🇨🇦 Canada · 🇿🇦 South Africa · 🇮🇪 Ireland</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="foot">
@@ -311,18 +337,24 @@
 
 <script>
 /* weekly updater: replace ONLY the next line */
-const PRESS_DATA = {"updated":"August 7, 2026","us_total":94878,"world_total":123208,"country_count":183,"top_states":[["California",9810],["Texas",7087],["Georgia",6584],["Florida",5770],["New York",4756],["Illinois",4345],["Michigan",3618],["Pennsylvania",2797],["Virginia",2710],["Ohio",2683]]};
+const PRESS_DATA = {"updated":"August 7, 2026","us_total":94878,"world_total":123208,"country_count":183,"top_states":[["California",9810],["Texas",7087],["Georgia",6584],["Florida",5770],["New York",4756],["Illinois",4345],["Michigan",3618],["Pennsylvania",2797],["Virginia",2710],["Ohio",2683]],"top_countries":[["🇬🇧","United Kingdom",8372],["🇦🇺","Australia",3894],["🇨🇦","Canada",2443],["🇿🇦","South Africa",1474],["🇮🇪","Ireland",940]]};
 (function(){
   const k = n => Math.floor(n/1000).toLocaleString('en-US') + ',000';
   const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
   set('pk-world', k(PRESS_DATA.world_total) + '+');
   set('pk-world-txt', k(PRESS_DATA.world_total));
   set('pk-countries', PRESS_DATA.country_count);
+  set('pk-countries2', PRESS_DATA.country_count);
+  set('pk-countries3', PRESS_DATA.country_count - 1);
   set('pk-us-txt', k(PRESS_DATA.us_total));
   set('pk-updated', PRESS_DATA.updated);
+  const intl = PRESS_DATA.world_total - PRESS_DATA.us_total;
+  set('pk-intl', k(intl) + '+');
   const tb = document.getElementById('pk-top5');
   if (tb) tb.innerHTML = PRESS_DATA.top_states.map((s, i) =>
     '<tr><td>' + (i + 1) + '</td><td>' + s[0] + '</td><td>' + s[1].toLocaleString('en-US') + '</td></tr>').join('');
+  const tc = document.getElementById('pk-top-countries');
+  if (tc) tc.textContent = PRESS_DATA.top_countries.map(c => c[0] + ' ' + c[1]).join(' · ');
 })();
 </script>
 
