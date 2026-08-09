@@ -54,6 +54,7 @@
         <li><a href="shop.html">Shop</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="social.html" class="active">Social</a></li>
+        <li><a href="contact.html">Contact &amp; Support</a></li>
       </ul>
     </nav>
   </div>

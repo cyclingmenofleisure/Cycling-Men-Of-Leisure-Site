@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Our Strava Club — Cycling Men of Leisure</title>
-<meta name="description" content="Join the free Cycling Men of Leisure Strava club — ride with a community that believes leisure is the plan, not the reward.">
+<title>Events &amp; Announcements — Cycling Men of Leisure</title>
+<meta name="description" content="Upcoming rides, appearances, and announcements from Cycling Men of Leisure — where to find us and how to ride along.">
 
 <!-- SEO -->
-<link rel="canonical" href="https://www.cyclingmenofleisure.com/strava">
+<link rel="canonical" href="https://www.cyclingmenofleisure.com/events">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cycling Men of Leisure">
-<meta property="og:title" content="Our Strava Club — Cycling Men of Leisure">
-<meta property="og:description" content="Join the free Cycling Men of Leisure Strava club — ride with a community that believes leisure is the plan, not the reward.">
-<meta property="og:url" content="https://www.cyclingmenofleisure.com/strava">
+<meta property="og:title" content="Events &amp; Announcements — Cycling Men of Leisure">
+<meta property="og:description" content="Upcoming rides, appearances, and announcements from Cycling Men of Leisure — where to find us and how to ride along.">
+<meta property="og:url" content="https://www.cyclingmenofleisure.com/events">
 <meta property="og:image" content="https://www.cyclingmenofleisure.com/images/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@cyclingleisure">
-<meta name="twitter:title" content="Our Strava Club — Cycling Men of Leisure">
-<meta name="twitter:description" content="Join the free Cycling Men of Leisure Strava club — ride with a community that believes leisure is the plan, not the reward.">
+<meta name="twitter:title" content="Events &amp; Announcements — Cycling Men of Leisure">
+<meta name="twitter:description" content="Upcoming rides, appearances, and announcements from Cycling Men of Leisure — where to find us and how to ride along.">
 <meta name="twitter:image" content="https://www.cyclingmenofleisure.com/images/og-card.jpg">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#1c1611">
@@ -49,87 +49,73 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="adventures.html">Adventures</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="strava.html" class="active">Club</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="strava.html">Club</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="social.html">Social</a></li>
+        <li><a href="contact.html">Contact &amp; Support</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <div class="hero">
-  <div class="kicker">Ride With Us</div>
-  <h1>The Strava Club</h1>
+  <div class="kicker">Come Ride With Us</div>
+  <h1>Events &amp; Announcements</h1>
   <hr class="rule">
-  <p class="lede">Log your miles, cheer on your fellow leisure riders, and be part of the
-  community between episodes. Whether you're chasing a century or just spinning around the
-  block, there's a place for you in the Cycling Men of Leisure Strava Club.</p>
-  <a class="btn" href="https://www.strava.com/clubs/cyclingmenofleisure" target="_blank" rel="noopener">Join the Club on Strava</a>
-  <a class="btn ghost" href="#why">Why Join?</a>
+  <p class="lede">We love meeting new people — after all, that's how all this got started.
+  Here's where things stand this season, and what we're pedaling toward next.</p>
 </div>
 
-<section id="why">
+<section>
   <div class="section-head">
-    <div class="kicker">Better Together</div>
-    <h2>Why Join the Club</h2>
+    <div class="kicker">The Calendar</div>
+    <h2>A Rest Year, Well Earned</h2>
   </div>
-  <div class="cols">
-    <div class="card">
-      <h3>Log Your Miles</h3>
-      <p>Every ride counts. Track your rides alongside the whole leisure community and watch
-      the club's miles add up, week after week.</p>
-    </div>
-    <div class="card">
-      <h3>See Everyone's Rides</h3>
-      <p>Follow along as fellow members roll out across the country — from RAGBRAI training
-      to a quiet evening loop — and give a kudos where it's earned.</p>
-    </div>
-    <div class="card">
-      <h3>Friendly Competition</h3>
-      <p>A little leaderboard never hurt anyone. Chase segments, join challenges, and enjoy
-      the camaraderie that keeps the pedals turning.</p>
-    </div>
+  <p class="quote">"Sometimes the most leisurely thing a Man of Leisure can do
+  is wait for the right ride."</p>
+  <p style="max-width:680px; margin:2rem auto 0; text-align:center; color:var(--cream-dim);">
+    There are no organized Cycling Men of Leisure events on the 2026 calendar — and in true
+    leisure fashion, we're perfectly at peace with that. Consider it a well-earned rest year:
+    the bikes are tuned, the bourbon's aging nicely, and we're already plotting the roads,
+    the rides, and the reunions that will make <strong>2027</strong> worth the wait.</p>
+  <p style="max-width:680px; margin:1.2rem auto 0; text-align:center; color:var(--cream-dim);">
+    When next season takes shape, you'll hear it here first — and on the podcast and our
+    social channels. Until then, keep the wheels turning and the stories coming.</p>
+  <div style="text-align:center;">
+    <a class="btn" href="podcast.html">Hear What's Next</a>
+    <a class="btn ghost" href="social.html">Follow Along</a>
   </div>
 </section>
 
 <div class="band">
   <div class="band-inner">
     <div class="section-head">
-      <div class="kicker">Three Easy Steps</div>
-      <h2>How to Join</h2>
+      <div class="kicker">Hot Off the Press</div>
+      <h2>Announcements</h2>
     </div>
     <div class="cols">
       <div class="card">
-        <h3>1 · Get on Strava</h3>
-        <p>Download the free Strava app or sign up at strava.com — it works with just about
-        any bike computer, watch, or phone.</p>
+        <h3>New Episodes Weekly</h3>
+        <p>Fresh podcast episodes and listener spotlights — subscribe so you never miss
+        a story.</p>
+        <a href="podcast.html">To the Podcast →</a>
       </div>
       <div class="card">
-        <h3>2 · Find the Club</h3>
-        <p>Search for "Cycling Men of Leisure" or use the button below to head straight to our
-        club page.</p>
+        <h3>CMOL Merch</h3>
+        <p>Wear the leisure. Kits, casuals, and gift ideas for the leisure-minded rider
+        in your life.</p>
+        <a href="shop.html">Find Our Stores →</a>
       </div>
       <div class="card">
-        <h3>3 · Request to Join</h3>
-        <p>Tap "Join" and you're in. Start logging rides and say hello to the leisure crew.</p>
+        <h3>Ride With Us</h3>
+        <p>Spot the kit at an event? Say hello — new friends are the whole point.</p>
+        <a href="contact.html">Get in Touch →</a>
       </div>
     </div>
   </div>
 </div>
-
-<section>
-  <div class="section-head">
-    <div class="kicker">See You Out There</div>
-    <h2>Join the Leisure Crew</h2>
-  </div>
-  <p class="quote">"It's a Great Day for a Bike Ride!"
-  <cite>— and an even better one to log it</cite></p>
-  <div style="text-align:center;">
-    <a class="btn" href="https://www.strava.com/clubs/cyclingmenofleisure" target="_blank" rel="noopener">Join Our Strava Club</a>
-  </div>
-</section>
 
 <footer>
   <div class="foot">
@@ -143,7 +129,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="podcast.html">Our Podcast</a></li>
-        <li><a href="blog.html">The Leisure Log</a></li>
+        <li><a href="adventures.html">Past Adventures</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="press.html">Press &amp; Media Kit</a></li>
       </ul>
