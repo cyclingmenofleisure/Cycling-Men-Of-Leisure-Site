@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guess the BRAG 2027 Route — Cycling Men of Leisure</title>
+<meta name="description" content="Think you know where BRAG 2027 is headed? Guess the start town, every overnight, and the end of the road before the route announcement.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1c1611">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<style>
+  .route-form { max-width: 620px; margin: 0 auto; }
+  .stop {
+    position: relative; padding: 0 0 0.4rem 3.4rem;
+  }
+  .stop::before {
+    content: ""; position: absolute; left: 1.05rem; top: 0.4rem; bottom: -0.4rem;
+    border-left: 2px dashed var(--line);
+  }
+  .stop.last::before { display: none; }
+  .stop .pin {
+    position: absolute; left: 0; top: 0; width: 2.2rem; height: 2.2rem;
+    border: 1px solid var(--bourbon); background: var(--ink); color: var(--bourbon);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Oswald', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em;
+  }
+  .stop.endpoint .pin { background: var(--bourbon); color: var(--ink); }
+  .stop label .sub { color: var(--bourbon); letter-spacing: 0.15em; }
+  .fineprint {
+    margin: 2.5rem auto 0; max-width: 620px; padding: 1.4rem 1.6rem;
+    background: var(--panel); border: 1px solid var(--line); color: var(--cream-dim); font-size: 1.05rem;
+  }
+  .divider { border: none; border-top: 1px solid rgba(200,146,58,0.2); margin: 1.6rem 0 2rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><img src="images/cml-mark-cream.png" alt="Cycling Men of Leisure — gentleman cyclist logo" class="brand-logo">
+      <div class="brand-text">Cycling <span>Men of Leisure</span>
+      <small>It's for women too</small>
+      </div>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu">&#9776;</label>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="spotlight.html">Spotlight</a></li>
+        <li><a href="where-we-roll.html">Where We Roll</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="adventures.html">Adventures</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="strava.html">Club</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="social.html">Social</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="kicker">The Guessing Game · BRAG 2027</div>
+  <h1>Guess the Route</h1>
+  <hr class="rule">
+  <p class="lede">The 2027 Bicycle Ride Across Georgia route is about to be announced. Before it is,
+  put your money where your map is: tell us where the ride starts, where we sleep each night, and
+  where it all ends. Closest guess earns a shout-out on the show and bragging rights
+  (pun fully intended).</p>
+  <a class="btn" href="#guess">Make Your Picks</a>
+</div>
+
+<section id="guess">
+  <div class="section-head">
+    <div class="kicker">Play Along</div>
+    <h2>Your BRAG 2027 Route</h2>
+  </div>
+  <form class="route-form" action="https://formspree.io/f/xwllwejb" method="POST">
+    <label for="b-name">Name</label>
+    <input id="b-name" name="name" type="text">
+    <label for="b-email">Email *</label>
+    <input id="b-email" name="email" type="email" required>
+
+    <hr class="divider">
+
+    <div class="stop endpoint"><span class="pin">GO</span>
+      <label for="b-start">Start Town *</label>
+      <input id="b-start" name="start_town" type="text" placeholder="City" required></div>
+
+    <div class="stop"><span class="pin">D1</span>
+      <label for="b-d1">Day One <span class="sub">· Overnight</span></label>
+      <input id="b-d1" name="day_1" type="text" placeholder="City"></div>
+
+    <div class="stop"><span class="pin">D2</span>
+      <label for="b-d2">Day Two <span class="sub">· Overnight</span></label>
+      <input id="b-d2" name="day_2" type="text" placeholder="City"></div>
+
+    <div class="stop"><span class="pin">D3·4</span>
+      <label for="b-d34">Days Three &amp; Four <span class="sub">· Layover town</span></label>
+      <input id="b-d34" name="days_3_and_4" type="text" placeholder="City"></div>
+
+    <div class="stop"><span class="pin">D5</span>
+      <label for="b-d5">Day Five <span class="sub">· Overnight</span></label>
+      <input id="b-d5" name="day_5" type="text" placeholder="City"></div>
+
+    <div class="stop"><span class="pin">D6</span>
+      <label for="b-d6">Day Six <span class="sub">· Overnight</span></label>
+      <input id="b-d6" name="day_6" type="text" placeholder="City"></div>
+
+    <div class="stop endpoint last"><span class="pin">END</span>
+      <label for="b-end">End of the Road *</label>
+      <input id="b-end" name="end_of_the_road" type="text" placeholder="City" required></div>
+
+    <label for="b-note">Anything else? (optional)</label>
+    <textarea id="b-note" name="message" rows="3" placeholder="Your reasoning, a hot tip, a heckle..."></textarea>
+
+    <input type="hidden" name="_subject" value="New BRAG 2027 Route Guess">
+    <input type="hidden" name="_next" value="https://www.cyclingmenofleisure.com/thank-you">
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+    <button class="btn" type="submit" style="border:none; cursor:pointer;">Lock In My Route</button>
+  </form>
+
+</section>
+
+<footer>
+  <div class="foot">
+    <div>
+      <img src="images/cml-logo-full-cream.png" alt="Cycling Men of Leisure — official logo" class="foot-badge">
+      <h4>Cycling Men of Leisure</h4>
+      <p style="color: var(--cream-dim);">A leisure &amp; life philosophy on two wheels.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="podcast.html">Our Podcast</a></li>
+        <li><a href="adventures.html">Past Adventures</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="press.html">Press &amp; Media Kit</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="https://www.buzzsprout.com/2054444/support">Become a Monthly Supporter</a></li>
+        <li><a href="https://www.paypal.com/ncp/payment/Q45H4ARCCDMNY" target="_blank" rel="noopener">Make a Donation</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Cycling Men of Leisure — All Rights Reserved</div>
+</footer>
+
+</body>
+</html>
